@@ -12,6 +12,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @booked_slots = Appointment.new.booked_slots
     @available_slots = Appointment.new.time_slot  - Appointment.new.booked_slots
+  binding.pry  
   end
 
   def edit

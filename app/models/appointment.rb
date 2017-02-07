@@ -16,9 +16,11 @@ class Appointment < ActiveRecord::Base
 	 end
 
 	def booked_slots(date = Date.current)
+	binding.pry	
 		slots = []
 		Appointment.where(date: Date.current.strftime('%Y-%d-%m')).each do |i|
 			slots << i.starttime
+	binding.pry		
 		end
 		slots.uniq
 	end		

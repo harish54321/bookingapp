@@ -18,6 +18,8 @@ gem 'mysql2', '~> 0.3.16'
 
 gem 'jquery-ui-rails'
 
+gem 'pry'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
