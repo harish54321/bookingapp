@@ -1,9 +1,5 @@
 class Appointment < ActiveRecord::Base
 
-	# validates :name, presence: true
-	# validates :phonenumber, presence: true
-	# validates :starttime, presence: true
-
 	def time_slot(date = Date.current)
 		workhouse = 8.times.map { |i| Time.new(1,1,1,8,0,0).hour + i }
 	    lunchhours = 14
@@ -16,11 +12,9 @@ class Appointment < ActiveRecord::Base
 	 end
 
 	def booked_slots(date = Date.current)
-	binding.pry	
 		slots = []
 		Appointment.where(date: Date.current.strftime('%Y-%d-%m')).each do |i|
 			slots << i.starttime
-	binding.pry		
 		end
 		slots.uniq
 	end		
